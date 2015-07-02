@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<metainfo>
+    <schemaVersion>2.0</schemaVersion>
+    <services>
+        <service>
+            <name>MAVEN</name>
+            <displayName>Ant</displayName>
+            <comment>Apache Ant Project Build Tool</comment>
+            <version>1.0.0</version>
+            <components>
+                <component>
+                  <name>ANT_CLIENT</name>
+                  <displayName>Ant</displayName>
+                  <category>CLIENT</category>
+                  <cardinality>1+</cardinality>
+                  <commandScript>
+                    <script>scripts/client.py</script>
+                    <scriptType>PYTHON</scriptType>
+                    <timeout>5000</timeout>
+                  </commandScript>
+                </component>
+            </components>
+            <osSpecifics>
+              <osSpecific>
+                <osFamily>redhat6</osFamily>
+                <packages>
+                  <package><name>apache-ant</name></package>
+                </packages>
+              </osSpecific>
+              <osSpecific>
+                <osFamily>ubuntu12</osFamily>
+                <packages>
+                  <package><name>apache-ant</name></package>
+                </packages>
+              </osSpecific>
+            </osSpecifics>
+        </service>
+    </services>
+</metainfo>
